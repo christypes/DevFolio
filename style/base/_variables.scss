@@ -13,3 +13,121 @@ $dark-blue-text: #272341; // For headings
 $default-font-size: 1.6rem;
 $mid-font-size: 2.5rem;
 $big-font-size: 4rem;
+
+// GENERAL BODY STYLING
+body {
+  font-family: $font-family;
+  font-size: $default-font-size;
+  color: $light-white;
+  background-color: $dark-grey; // Dark theme background
+  margin: 0;
+  padding: 0;
+}
+
+// HEADINGS
+h1, h2, h3, h4, h5, h6 {
+  color: $dark-blue-text;
+  font-family: $font-family;
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-size: $big-font-size;
+}
+
+h2 {
+  font-size: $mid-font-size;
+}
+
+h3 {
+  font-size: calc($mid-font-size - 0.5rem);
+}
+
+// LINKS
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+// BUTTONS
+.button {
+  background: linear-gradient(90deg, $primary-color, $secondary-color);
+  color: $white-color;
+  border: none;
+  padding: 10px 20px;
+  font-size: $default-font-size;
+  font-family: $font-family;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, $secondary-color, $primary-color);
+    transform: scale(1.05);
+  }
+}
+
+// SECTIONS
+section {
+  padding: 5rem 2rem;
+  background-color: $dark-grey;
+  color: $light-white;
+
+  &.alternate {
+    background-color: $dark-blue-text;
+  }
+}
+
+// HERO SECTION
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(180deg, $dark-grey, $dark-blue-text);
+  color: $white-color;
+
+  h1 {
+    font-size: $big-font-size;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: $mid-font-size;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .cta-btn {
+    margin-top: 2rem;
+  }
+}
+
+// FOOTER
+footer {
+  background-color: $dark-blue-text;
+  color: $light-white;
+  text-align: center;
+  padding: 2rem;
+
+  .social-links {
+    margin: 1rem 0;
+
+    a {
+      color: $light-white;
+      font-size: 2rem;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
